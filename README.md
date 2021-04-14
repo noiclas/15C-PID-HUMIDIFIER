@@ -1,4 +1,4 @@
-# 15C-PID-HUMIDIFIER
+# PID HUMIDIFIER
 Welcome to our PID Humidifier Project. This project was done for PHYS 15C LAB class with the aid of Daniel Sorensen, Simon Mitchell, and Nic Arnaud
 
 ## Motivation
@@ -19,3 +19,4 @@ Welcome to our PID Humidifier Project. This project was done for PHYS 15C LAB cl
 # Code
 * TBD
 # Finished Project
+* TBD
