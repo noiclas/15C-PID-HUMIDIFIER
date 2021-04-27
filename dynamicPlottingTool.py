@@ -5,7 +5,7 @@ import time
 class dynamicPlotter():
     '''
     Necessary input to initialize dynamicPlotter:
-        figure - the matplotlib object where your axes will go (fig - plt.figure())
+        figure - the matplotlib object where your axes will go (fig = plt.figure())
     Necessary input to use dynamicPlotter.plot():
         datasets -- in the form datasets = {0:[X0,Y0],1:[X1,Y1],etc}, where each [Xi,Yi] is a full dataset to plot
     Optional input to initialize object:
