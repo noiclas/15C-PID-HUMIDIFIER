@@ -1,13 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 
 class dynamicPlotter():
     '''
     Necessary input to initialize dynamicPlotter:
-        figure - the matplotlib object where your axes will go (fig = plt.figure())
+        figure - the matplotlib object where your axes will go (fig - plt.figure())
+        (also, have numpy and matplotlib.pyplot imported)
     Necessary input to use dynamicPlotter.plot():
         datasets -- in the form datasets = {0:[X0,Y0],1:[X1,Y1],etc}, where each [Xi,Yi] is a full dataset to plot
+            -Xi and Yi should have a size of at least two
     Optional input to initialize object:
         dataFormat -- in the form dataFormat = {0:{'xlabel':'time'},1:{'memory':600}}.
             This would set the xlabel in the top plot to 'time' and make the bottom plot display data 600 seconds back
@@ -132,6 +133,4 @@ class dynamicSinglePlot():
         self.figure.canvas.draw()
         self.figure.canvas.flush_events()
         
-    
  
-    
