@@ -46,7 +46,9 @@ To update arguments: You can call sensorManager.update(running,period), the defa
     sensorManager.update(running=False). Same for levelManager, but do levelManager.update(running,period,PIDParameters). To stop the plotter, do
     plotManager.stop()
 
-
+And to write a PID algorithm into this interface, write a function algorithm(PIDParameters,sensorData) that returns value for whatever value it chose
+    and toggles the humidifier, put it into PIDWithPlot.py on the pi, and change levelData's default function argument to the name if your function.
+    sensorData is formatted as {'times':[times],'values'[[v1],[v2],[v3],[v4]]}
 '''
 
 
