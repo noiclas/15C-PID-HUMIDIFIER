@@ -1,7 +1,5 @@
 import pickle
 import time
-import numpy as np
-import subprocess
 import matplotlib.pyplot as plt
 import dynamicPlottingTool
 from threading import Thread
@@ -100,10 +98,10 @@ class plotManager():
             startTime = time.time()
             
             try:
-                self.fourSensorsPlusLevel()
+                self.oneSensorPlusLevel()
             except:
                 time.sleep(0.5)
-                self.fourSensorsPlusLevel()
+                self.oneSensorPlusLevel()
             
             elapsedTime = time.time()-startTime
             if elapsedTime >= self.period:
@@ -121,6 +119,11 @@ class plotManager():
     
     def stop(self):
         self.running = False
+
+
+
+
+
 
 
 
