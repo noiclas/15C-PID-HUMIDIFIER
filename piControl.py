@@ -1,6 +1,4 @@
 import os
-from datetime import datetime
-import time
 
 
 import paramiko
@@ -12,7 +10,7 @@ ftp_client=ssh_client.open_sftp()
 
 experimentName = None
 if experimentName == None:
-    experimentName = 'xpTwo'
+    experimentName = '5.25.21.1'
 os.system('mkdir {}'.format(experimentName))
 ssh_client.exec_command('mkdir /home/pi/Documents/{}'.format(experimentName))
 
@@ -45,14 +43,14 @@ it'll sometimes fail. It's not too bad to fix, just import and define another pl
 To update arguments: You can call sensorManager.update(running,period), the defaults are whatever they were before. To stop the sensor, do
     sensorManager.update(running=False). Same for levelManager, but do levelManager.update(running,period,PIDParameters). To stop the plotter, do
     plotManager.stop()
-
-And to write a PID algorithm into this interface, write a function algorithm(PIDParameters,sensorData) that returns value for whatever value it chose
-    and toggles the humidifier, put it into PIDWithPlot.py on the pi, and change levelData's default function argument to the name if your function.
-    sensorData is formatted as {'times':[times],'values'[[v1],[v2],[v3],[v4]]}
 '''
 
 
 
 
+def stopAll():
+    plotManager.stop()
+    sensorManager.update(running=False)
+    levelManager.update(running=False)
 
 
