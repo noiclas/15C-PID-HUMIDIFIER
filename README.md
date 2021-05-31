@@ -13,14 +13,14 @@ Our goal for this project was to convert a commercial, manually controlled, humi
 * Adafruit TCA9548A 1-to-8 I2C Multiplexer
 
 # Design
-* TBD
+* Our project 
 # Wiring
-* TBD
+* Everything was directly connected to the Pi via breadboard. (stuff about what pin goes to where). The humidifier is plugged into a remote control outlet switch with the respective transmitter and reciever connected to the Pi.
 # Building Process
 * We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the muliplexer to our curcuit to be able to use our 4 sensors at once. Once calibrated we went onto attaching a stepper motor setup to the knob so that we could not play with varying the strength of the humidifier (whereas we could only do Bang-Bang before) 
-# Testing
-* Our first tests were done in a bedroom with a single sensor, we let the humidifer turn at max strength for about 30 minutes to see how good the humidifier was. 
+# Testing/Constructing the PID
+* Our first tests were done in a bedroom with a single sensor, we let the humidifer turn at max strength for about 30 minutes to see how strong the humidifier was. These first few tests did not tell us much other than we had a working sensor and humidifier. Due to the difference in size between humidifier and room, we decided to move our set-up to a one person tent; its smaller volume and relative airtightness made our data collection much faster and smoother
 # Code
-* TBD
+* We 
 # Finished Project
 * TBD
