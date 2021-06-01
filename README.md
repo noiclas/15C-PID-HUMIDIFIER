@@ -26,9 +26,9 @@ Most of the components were connected together via breadboard. Our radio transmi
  HTU21D-F Sensor |  TCA9548A Multiplexer
 :-------------------------:|:-------------------------:
 ![IMG_2329](https://user-images.githubusercontent.com/54754917/120395690-43c43500-c2ea-11eb-85f1-8dcfb18fe851.jpeg)  |  ![IMG_2327](https://user-images.githubusercontent.com/54754917/120395844-86860d00-c2ea-11eb-8b9f-ee08fb5c4edd.jpeg)
-hello |
 ## Motor/Transmitter/Reciever Circuit
 ![71D705D0-E963-4D03-8B7A-882E52D9CAC2_1_105_c](https://user-images.githubusercontent.com/54754917/120394406-3908a080-c2e8-11eb-9981-4eaf4ddb1052.jpeg)
+hello |
 # Building Process
  We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the multiplexer to our circuit to be able to use our 4 sensors at once. After experimenting with that we went onto attaching a stepper motor setup to the knob so that we could control the power on a finer level than simple power toggling. At this point we decided on the volume in which we would test our algorithms - a small backpacking tent that was lying around. We assembled the whole setup, with a single sensor hanging from the ‘ceiling’ of the tent above the humidifier.
 # Testing/Constructing the PID
