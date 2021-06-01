@@ -29,6 +29,9 @@ Most of the components were connected together via breadboard. Our radio transmi
 ## Motor/Transmitter/Reciever Circuit
 ![71D705D0-E963-4D03-8B7A-882E52D9CAC2_1_105_c](https://user-images.githubusercontent.com/54754917/120394406-3908a080-c2e8-11eb-9981-4eaf4ddb1052.jpeg)
 hello |
+:-----------------------------------:|
+![fullDiagram](https://user-images.githubusercontent.com/54754917/120396783-006ac600-c2ec-11eb-94d8-b10ef70cf266.jpeg)
+
 # Building Process
  We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the multiplexer to our circuit to be able to use our 4 sensors at once. After experimenting with that we went onto attaching a stepper motor setup to the knob so that we could control the power on a finer level than simple power toggling. At this point we decided on the volume in which we would test our algorithms - a small backpacking tent that was lying around. We assembled the whole setup, with a single sensor hanging from the ‘ceiling’ of the tent above the humidifier.
 # Testing/Constructing the PID
