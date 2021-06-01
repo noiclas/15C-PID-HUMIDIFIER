@@ -15,14 +15,16 @@ Our goal for this project was to convert a commercial, manually controlled, humi
 
 Total cost came to around $210 but we only used about $130 of the materials (we had extra sensors, motors, and outlets). For reference, humidifiers with built in humidistats range between $70-$110. 
 
-## Test title
-hellp
 # Motivation
 Maintaining humidity levels is crucial in many temperamental setups. For instance in a lab environment, too high humidity can cause the air to reach its dew point and cause water to collect on equipment. On the other hand, if the humidity is too low, static electricity could build in the air resulting in unwanted electric discharge. Another important use is in greenhouse control, maintaining suitable living conditions for whatever plant you are trying to grow. Controlling humidity is a subtle yet important component of many room scaled projects, not just a cure for dry skin. We wanted to see how well we could construct a sophisticated humidifier without wasting our budget and provide a sort of tutorial for others to do the same.
 # Design
 Our project is composed of two modules: humidity sensing, and humidity control. The sensing component consists of four Adafruit humidity sensors connected to a multiplexer that allows the Raspberry Pi to interface with all of them through a single I2C port. By gathering humidity data through the sensors, the Raspberry Pi runs our algorithm to decide a level to set the humidifier to, which is accomplished through the control module. The control module consists of a commercial humidifier, outfitted with a stepper motor to manually manipulate its power knob, and plugged into a remote control outlet which toggles its power. By actuating the motor and sending radio signals to toggle the outlet, our Raspberry Pi is able to toggle the humidifier’s power state, as well as making finer adjustments to its power level. *Pictures of the whole setup*
 # Wiring
-Most of the components were connected together via breadboard. Our radio transmitter and receiver are wired straight to the Raspberry Pi. The humidity sensors, with the same, unchangeable I2C port address needed to be wired through the I2C Multiplexer so that the Pi could communicate with all of them separately. The stepper motor is connected to a breakout board that interfaces directly with the Pi, which takes power, ground, and data connections and actuated the motor itself. *Circuit diagram and pictures*
+Most of the components were connected together via breadboard. Our radio transmitter and receiver are wired straight to the Raspberry Pi. The humidity sensors, with the same, unchangeable I2C port address needed to be wired through the I2C Multiplexer so that the Pi could communicate with all of them separately. The stepper motor is connected to a breakout board that interfaces directly with the Pi, which takes power, ground, and data connections and actuated the motor itself. 
+## Sensor Circuit
+![Screen Shot 2021-06-01 at 14 22 34](https://user-images.githubusercontent.com/54754917/120393211-68b6a900-c2e6-11eb-885a-6968c94bdb74.jpeg)
+
+## Motor/Transmitter/Reciever Circuit
 # Building Process
  We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the multiplexer to our circuit to be able to use our 4 sensors at once. After experimenting with that we went onto attaching a stepper motor setup to the knob so that we could control the power on a finer level than simple power toggling. At this point we decided on the volume in which we would test our algorithms - a small backpacking tent that was lying around. We assembled the whole setup, with a single sensor hanging from the ‘ceiling’ of the tent above the humidifier.
 # Testing/Constructing the PID
