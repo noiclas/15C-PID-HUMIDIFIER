@@ -26,11 +26,7 @@ Most of the components were connected together via breadboard. Our radio transmi
  HTU21D-F Sensor |  TCA9548A Multiplexer
 :-------------------------:|:-------------------------:
 ![IMG_2329](https://user-images.githubusercontent.com/54754917/120395690-43c43500-c2ea-11eb-85f1-8dcfb18fe851.jpeg)  |  ![IMG_2327](https://user-images.githubusercontent.com/54754917/120395844-86860d00-c2ea-11eb-8b9f-ee08fb5c4edd.jpeg)
-
-
-
-
-
+hello |
 ## Motor/Transmitter/Reciever Circuit
 ![71D705D0-E963-4D03-8B7A-882E52D9CAC2_1_105_c](https://user-images.githubusercontent.com/54754917/120394406-3908a080-c2e8-11eb-9981-4eaf4ddb1052.jpeg)
 # Building Process
