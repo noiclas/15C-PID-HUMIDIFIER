@@ -13,7 +13,7 @@ Our goal for this project was to convert a commercial, manually controlled, humi
 * Adafruit TCA9548A 1-to-8 I2C Multiplexer ($8)
 * 100 ft red 18 gauge wire ($10)
 
-Total cost came to around $210 but we only used about $130 of the materials (we had extra sensors, motors, and outlets). For reference, humidifiers with built in humidistats range between $70-$110. 
+Total cost came to around $210 but we only used about $130 of the materials (we had extra sensors, motors, and outlets). For reference, humidifiers with built in humidistats range between $70-$110 :(.
 
 # Motivation
 Maintaining humidity levels is crucial in many temperamental setups. For instance in a lab environment, too high humidity can cause the air to reach its dew point and cause water to collect on equipment. On the other hand, if the humidity is too low, static electricity could build in the air resulting in unwanted electric discharge. Another important use is in greenhouse control, maintaining suitable living conditions for whatever plant you are trying to grow. Controlling humidity is a subtle yet important component of many room scaled projects, not just a cure for dry skin. We wanted to see how well we could construct a sophisticated humidifier without wasting our budget and provide a sort of tutorial for others to do the same.
