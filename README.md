@@ -21,17 +21,19 @@ Maintaining humidity levels is crucial in many temperamental setups. For instanc
 Our project is composed of two modules: humidity sensing, and humidity control. The sensing component consists of four Adafruit humidity sensors connected to a multiplexer that allows the Raspberry Pi to interface with all of them through a single I2C port. By gathering humidity data through the sensors, the Raspberry Pi runs our algorithm to decide a level to set the humidifier to, which is accomplished through the control module. The control module consists of a commercial humidifier, outfitted with a stepper motor to manually manipulate its power knob, and plugged into a remote control outlet which toggles its power. By actuating the motor and sending radio signals to toggle the outlet, our Raspberry Pi is able to toggle the humidifier’s power state, as well as making finer adjustments to its power level. *Pictures of the whole setup*
 # Wiring
 Most of the components were connected together via breadboard. Our radio transmitter and receiver are wired straight to the Raspberry Pi. The humidity sensors, with the same, unchangeable I2C port address needed to be wired through the I2C Multiplexer so that the Pi could communicate with all of them separately. The stepper motor is connected to a breakout board that interfaces directly with the Pi, which takes power, ground, and data connections and actuated the motor itself. 
-Full Circuit |
-:-----------------------------------:|
+## Full Circuit 
 ![fullDiagram](https://user-images.githubusercontent.com/54754917/120396783-006ac600-c2ec-11eb-94d8-b10ef70cf266.jpeg)
-Sensor Circuit |
-:-----------------------:
+## Sensor Circuit
 ![Screen Shot 2021-06-01 at 14 22 34](https://user-images.githubusercontent.com/54754917/120393211-68b6a900-c2e6-11eb-885a-6968c94bdb74.jpeg)
  HTU21D-F Sensor |  TCA9548A Multiplexer
 :-------------------------:|:-------------------------:
 ![IMG_2329](https://user-images.githubusercontent.com/54754917/120395690-43c43500-c2ea-11eb-85f1-8dcfb18fe851.jpeg)  |  ![IMG_2327](https://user-images.githubusercontent.com/54754917/120395844-86860d00-c2ea-11eb-8b9f-ee08fb5c4edd.jpeg)
 ## Motor/Transmitter/Reciever Circuit
 ![71D705D0-E963-4D03-8B7A-882E52D9CAC2_1_105_c](https://user-images.githubusercontent.com/54754917/120394406-3908a080-c2e8-11eb-9981-4eaf4ddb1052.jpeg)
+ Remote Outlet + Logo |  Motor + Driver Board
+:-------------------------:|:-------------------------:
+![IMG_2326](https://user-images.githubusercontent.com/54754917/120397570-64da5500-c2ed-11eb-9bb7-e210932ef5d7.jpeg) | ![IMG_3228](https://user-images.githubusercontent.com/54754917/120397623-7ae81580-c2ed-11eb-990d-f91b16e885d0.jpeg)
+
 
 # Building Process
  We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the multiplexer to our circuit to be able to use our 4 sensors at once. After experimenting with that we went onto attaching a stepper motor setup to the knob so that we could control the power on a finer level than simple power toggling. At this point we decided on the volume in which we would test our algorithms - a small backpacking tent that was lying around. We assembled the whole setup, with a single sensor hanging from the ‘ceiling’ of the tent above the humidifier.
