@@ -1,0 +1,1 @@
+This is a brief overview on how this system on the pi that interacts with the humidifier and the sensors works. If all works perfectly one doesn't need to know any of this to actually run the code, but when something inevitably goes wrong it's essential to know.
