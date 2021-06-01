@@ -23,6 +23,8 @@ Our project is composed of two modules: humidity sensing, and humidity control. 
 Most of the components were connected together via breadboard. Our radio transmitter and receiver are wired straight to the Raspberry Pi. The humidity sensors, with the same, unchangeable I2C port address needed to be wired through the I2C Multiplexer so that the Pi could communicate with all of them separately. The stepper motor is connected to a breakout board that interfaces directly with the Pi, which takes power, ground, and data connections and actuated the motor itself. 
 ## Sensor Circuit
 ![Screen Shot 2021-06-01 at 14 22 34](https://user-images.githubusercontent.com/54754917/120393211-68b6a900-c2e6-11eb-885a-6968c94bdb74.jpeg)
+![IMG_2329](https://user-images.githubusercontent.com/54754917/120395690-43c43500-c2ea-11eb-85f1-8dcfb18fe851.jpeg)![IMG_2329](https://user-images.githubusercontent.com/54754917/120395772-69e9d500-c2ea-11eb-85b0-13a42ea218a0.jpeg)
+
 
 ## Motor/Transmitter/Reciever Circuit
 ![71D705D0-E963-4D03-8B7A-882E52D9CAC2_1_105_c](https://user-images.githubusercontent.com/54754917/120394406-3908a080-c2e8-11eb-9981-4eaf4ddb1052.jpeg)
