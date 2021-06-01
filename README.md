@@ -4,13 +4,17 @@ Welcome to our PID Humidifier Project. This project was done for PHYS 15C LAB cl
 Our goal for this project was to convert a commercial, manually controlled, humidifier to an electronically controlled one. Humidifiers meant for bedrooms and rooms of similar size are not very sophisticated as in they are either on or off, with their knobs changing their strength. They get the job done but they can’t set and maintain the humidity of rooms on their own. We wanted to improve upon the design and turn a humidifier into a PID controlled humidifier which can maintain given humidity levels using feedback from sensors. This project required us to construct a system to measure and maintain humidity with the only prebuilt parts being the humidifier, Raspberry Pi, and electrical peripherals from Adafruit and other suppliers.
 
 # List of Components:
-* 4 x Adafruit HTU21D-F Temperature & Humidity Sensor Breakout Board
-* Raspberry PI
-* Pure Enrichment MistAire XL Ultrasonic Cool Mist Humidifier
-* Etekcity ZAP 5LX Wireless Remote Control Outlet Switch
-* 433Mhz Rf Transmitter and Receiver Module Board
-* HiLetgo ULN2003 28BYJ-48 4-Phase Stepper Motor
-* Adafruit TCA9548A 1-to-8 I2C Multiplexer
+* 4 x Adafruit HTU21D-F Temperature & Humidity Sensor Breakout Board ($16 each)
+* Raspberry PI (Already had)
+* Pure Enrichment MistAire XL Ultrasonic Cool Mist Humidifier ($64)
+* Etekcity ZAP 5LX Wireless Remote Control Outlet Switch ($39 for 5)
+* 433Mhz Rf Transmitter and Receiver Module Board ($15)
+* HiLetgo ULN2003 28BYJ-48 4-Phase Stepper Motor ($13 for 5)
+* Adafruit TCA9548A 1-to-8 I2C Multiplexer ($8)
+* 100 ft red 18 gauge wire ($10)
+
+Total cost came to around $210 but we only used about $130 of the materials (we had extra sensors, motors, and outlets). For reference, humidifiers with built in humidistats range between $70-$110. 
+
 # Motivation
 Maintaining humidity levels is crucial in many temperamental setups. For instance in a lab environment, too high humidity can cause the air to reach its dew point and cause water to collect on equipment. On the other hand, if the humidity is too low, static electricity could build in the air resulting in unwanted electric discharge. Another important use is in greenhouse control, maintaining suitable living conditions for whatever plant you are trying to grow. Controlling humidity is a subtle yet important component of many room scaled projects, not just a cure for dry skin. We wanted to see how well we could construct a sophisticated humidifier without wasting our budget and provide a sort of tutorial for others to do the same.
 # Design
