@@ -39,15 +39,22 @@ Most of the components were connected together via breadboard. Our radio transmi
 # Building Process
  We are using a commercial humidifier so all of the building concerns the electrical components. Firstly, we used a remote controlled outlet switch to turn the humidifier on and off from the PI and connected a humidity sensor to the Pi. Once enough testing was done with a single sensor, we added the multiplexer to our circuit to be able to use our 4 sensors at once. After experimenting with that we went onto attaching a stepper motor setup to the knob so that we could control the power on a finer level than simple power toggling. At this point we decided on the volume in which we would test our algorithms - a small backpacking tent that was lying around. We assembled the whole setup, with a single sensor hanging from the ‘ceiling’ of the tent above the humidifier.
 # Testing/Constructing the PID
- Our first tests were done in a bedroom with a single sensor, we let the humidifier turn at max strength for about 30 minutes to see how strong the humidifier was. These first few tests did not tell us much other than we had a working sensor and humidifier. Due to the difference in size between humidifier and room, we decided to move our set-up to a one person tent; its smaller volume and relative airtightness made our data collection much faster and smoother. 
- 
- First up was testing with a Bang-Bang algorithm that turned the humidifier off/on when the humidity was above/below
-  Tent |  Inside Tent
+ Our first tests were done in a bedroom with a single sensor, we let the humidifier turn at max strength for about 30 minutes to see how strong the humidifier was. These first few tests did not tell us much other than we had a working sensor and humidifier. Due to the difference in size between humidifier and room, we decided to move our set-up to a one person tent; its smaller volume and relative airtightness made our data collection much faster and smoother.
+   Tent |  Inside Tent
 :-------------------------:|:-------------------------:
 ![IMG_3230](https://user-images.githubusercontent.com/54754917/120402717-a4a63a00-c2f7-11eb-9a0e-9ff0f94205a5.jpeg)|![IMG_3229](https://user-images.githubusercontent.com/54754917/120402761-b7207380-c2f7-11eb-994f-43a130b950aa.jpeg)
 
+First we ran a simple bang-bang control algorithm, where we instructed the humidifier to go fully on when the humidity dipped below a set point, and fully off when it went above. These results (shown below) were promising, but nowhere near the accuracy we hoped to achieve with full PID control.
+## Some Bang-Bang
+![bangbang_feedback](https://user-images.githubusercontent.com/54754917/120405885-7aa44600-c2fe-11eb-95f9-98f74337d00c.jpeg)
+
+At this point we began writing the PID control script. Given the noisiness of the data given by the sensors, as well as the slow-changing nature of this situation, we elected to neglect the Differential term following fruitless efforts to use it in a meaningful way. Our final script contains functions to determine the Proportional and Integral errors, with user-changeable gain parameters for each. 
+We extensively tested the PID script with various gain parameters, as well as different amounts of time to calculate the Integral term over - ultimately what we landed on a Proportional gain of 6, Integral gain of 0.01, and an integration time of 20 seconds. This allowed the humidifier to respond relatively aggressively to deviations from the setpoint, while keeping oscillations as minimal as possible.
+## Some PID
+![pid_humidity](https://user-images.githubusercontent.com/54754917/120405938-9576ba80-c2fe-11eb-999e-67f08aab3d34.jpeg)
+
 # Code
- We 
+Our code made use of the PI's built in SSH features. In the most general terms, we would send the PI the parameters such as the target humidity and PID coefficients which would start up the PI and PID algorithm. The data is then saved into a pickle file which we could extract from the PI through SSH. The pickle file is then unpickled and used in our live plotter showing plots of the relative humidity and power level of the humidifier. The specifics of our code can be found under the GUIDE files in the 
 # A Note on Multiple Sensors
 Our project is fully wired up to make use of multiple sensors, which can improve humidity control by cross-referencing to reduce signal noise, or perhaps measuring humidity at multiple different points in a single volume. However, the sensors’ readings differ from each other substantially and inconsistently, so much so that our calibration attempts failed miserably. As a result our final project makes use of only a single sensor. One may be able to make multiple sensors work by collecting information on each sensor’s bias at a range of humidity levels and using that to calibrate future readings. Our efforts in this direction, however, were unsuccessful. :(
 # Finished Project
