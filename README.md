@@ -52,7 +52,8 @@ At this point we began writing the PID control script. Given the noisiness of th
 We extensively tested the PID script with various gain parameters, as well as different amounts of time to calculate the Integral term over - ultimately what we landed on a Proportional gain of 3, Integral gain of 0.3, and an integration time of 20 seconds. This meant that a consistent deviation of 5% from the target would cause the humidifier to adjust its power by about 45%. This allowed the humidifier to respond relatively aggressively to deviations from the setpoint, while keeping oscillations as minimal as possible.
 ## Some PID
 ![pid_humidity](https://user-images.githubusercontent.com/54754917/120405938-9576ba80-c2fe-11eb-999e-67f08aab3d34.jpeg)
-![PID90Power](https://user-images.githubusercontent.com/62636144/120531570-a02f5f00-c393-11eb-89f3-71355f4e57d3.png)
+![Screen Shot 2021-06-02 at 11 15 16 AM](https://user-images.githubusercontent.com/62636144/120531808-e1277380-c393-11eb-874c-9c963b1ff864.png)
+
 
 
 
