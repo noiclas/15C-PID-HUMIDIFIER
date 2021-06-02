@@ -55,6 +55,12 @@ We extensively tested the PID script with various gain parameters, as well as di
 
 # Code
 Our code made use of the PI's built in SSH features. In the most general terms, we would send the PI the parameters such as the target humidity and PID coefficients which would start up the PI and PID algorithm. The data is then saved into a pickle file which we could extract from the PI through SSH. The pickle file is then unpickled and used in our live plotter showing plots of the relative humidity and power level of the humidifier. The specifics of our code can be found under the GUIDE and OVERVIEW files in the PID-PIPELINE and EXPERIMENT-OVERVIEW folders.
+
+We wrote a Python class (sensorArray.py) that utilizes Adafruit’s HTU21D and TCA9548A libraries to communicate with the humidity sensors and multiplexer, respectively. (https://pypi.org/project/adafruit-circuitpython-HTU21D/, https://pypi.org/project/adafruit-circuitpython-tca9548a/)  This class was implemented in higher-level scripts to simplify programming.
+
+Additionally, we wrote motorclass.py to communicate with our stepper motor, keep track of the current power level, and easily change power levels. It makes use of the RPistepper library (https://pypi.org/project/RPistepper/) to control the stepper motor.
+
+The radio transmitter and receiver were commanded via OS-Level commands that make use of the rfoutlet library (https://github.com/timleland/rfoutlet).
 # A Note on Multiple Sensors
 Our project is fully wired up to make use of multiple sensors, which can improve humidity control by cross-referencing to reduce signal noise, or perhaps measuring humidity at multiple different points in a single volume. However, the sensors’ readings differ from each other substantially and inconsistently, so much so that our calibration attempts failed miserably. As a result our final project makes use of only a single sensor. One may be able to make multiple sensors work by collecting information on each sensor’s bias at a range of humidity levels and using that to calibrate future readings. Our efforts in this direction, however, were unsuccessful. :(
 # Finished Project
