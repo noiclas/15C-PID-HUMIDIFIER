@@ -52,6 +52,8 @@ At this point we began writing the PID control script. Given the noisiness of th
 We extensively tested the PID script with various gain parameters, as well as different amounts of time to calculate the Integral term over - ultimately what we landed on a Proportional gain of 3, Integral gain of 0.3, and an integration time of 20 seconds. This meant that a consistent deviation of 5% from the target would cause the humidifier to adjust its power by about 45%. This allowed the humidifier to respond relatively aggressively to deviations from the setpoint, while keeping oscillations as minimal as possible.
 ## Some PID
 ![pid_humidity](https://user-images.githubusercontent.com/54754917/120405938-9576ba80-c2fe-11eb-999e-67f08aab3d34.jpeg)
+![PID90Power](https://user-images.githubusercontent.com/62636144/120531343-5e061d80-c393-11eb-85c2-b49c081dca7e.png)
+
 
 # Code
 Our code made use of the PI's built in SSH features. In the most general terms, we would send the PI the parameters such as the target humidity and PID coefficients which would start up the PI and PID algorithm. The data is then saved into a pickle file which we could extract from the PI through SSH. The pickle file is then unpickled and used in our live plotter showing plots of the relative humidity and power level of the humidifier. The specifics of our code can be found under the OVERVIEW and GUIDE files in the PID-SYSTEM and EXPERIMENT-PIPELINE folders.
