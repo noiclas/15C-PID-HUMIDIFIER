@@ -64,11 +64,15 @@ The radio transmitter and receiver were commanded via OS-Level commands that mak
 # A Note on Multiple Sensors
 Our project is fully wired up to make use of multiple sensors, which can improve humidity control by cross-referencing to reduce signal noise, or perhaps measuring humidity at multiple different points in a single volume. However, the sensors’ readings differ from each other substantially and inconsistently, so much so that our calibration attempts failed miserably. As a result our final project makes use of only a single sensor. One may be able to make multiple sensors work by collecting information on each sensor’s bias at a range of humidity levels and using that to calibrate future readings. Our efforts in this direction, however, were unsuccessful. :(
 # Finished Project
-Overall, our project was successful within a certain range of conditions. As the PID plots above show, we successfully implimented the stabilization of certain humidity levels in a tent on a calm day, which captures the spirit of what we set out to do. Our project worked best when the wind was low and there were minimal natural disturbances to the tent. However, on windy days where there were significant random losses of humidity followed by calm periods where most of the humidity was trapped inside the tent, there was only so much our algorithm could do.
+Overall, our project was successful within a certain range of conditions. As the PID plots above show, we successfully implimented the stabilization of certain humidity levels in a tent on a calm day, which captures the spirit of what we set out to do. Our project worked best when the wind was low and there were minimal natural disturbances to the tent. However, on windy days where there were significant random losses of humidity followed by calm periods where most of the humidity was trapped inside the tent, there was only so much that our algorithm could do.
 
 ![windyDayPID](https://user-images.githubusercontent.com/62636144/120526395-01ecca80-c38e-11eb-8f0c-cf4de7bce41b.png)
 
-As we watched this experiment unfold, it seemed that with every gust of wind the algorithm was powerless to stop the humidity from dropping far below the desired level, and when the wind was calm, even though the setting would be very low, 
+As we watched this experiment unfold, it seemed that with every gust of wind the algorithm was powerless to stop the humidity from dropping far below the desired level, and it never had a chance to stabilize. 
+
+This less sucessful trial shows the limitions of our setup, and clarifies what it accomplishes. When the humidifier is turned on to a certain power level, the enviornment will tend to favor some average humidity reading. The PID alrogithm responds to deviations from that average, and can even set the humidity to a level consistently higher or lower than that average. This works well when the enviornmental conditions do not change quickly or sharply, but naturally fails when the enviornmental conditions alter the humidity more strongly than the humidifier can.
+
+
 
 
 
