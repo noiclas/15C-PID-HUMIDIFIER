@@ -65,6 +65,8 @@ The radio transmitter and receiver were commanded via OS-Level commands that mak
 Our project is fully wired up to make use of multiple sensors, which can improve humidity control by cross-referencing to reduce signal noise, or perhaps measuring humidity at multiple different points in a single volume. However, the sensors’ readings differ from each other substantially and inconsistently, so much so that our calibration attempts failed miserably. As a result our final project makes use of only a single sensor. One may be able to make multiple sensors work by collecting information on each sensor’s bias at a range of humidity levels and using that to calibrate future readings. Our efforts in this direction, however, were unsuccessful. :(
 # Finished Project
 Overall, our project was successful within a certain range of conditions. As the PID plots above show, we successfully implimented the stabilization of certain humidity levels in a tent on a calm day, which captures the spirit of what we set out to do. Our project worked best when the wind was low and there were minimal natural disturbances to the tent. However, on windy days where there were significant random losses of humidity followed by calm periods where most of the humidity was trapped inside the tent, there was only so much our algorithm could do.
+![windyDayPID](https://user-images.githubusercontent.com/62636144/120526395-01ecca80-c38e-11eb-8f0c-cf4de7bce41b.png)
+The results in these more chaotic conditions are discouraging. Even though the algorithm was behaving as it should, it seemed to have very little ability to stabilize the system given such strong unbalancing factors.
 
 
 
