@@ -74,7 +74,7 @@ Overall, our project was successful within a certain range of conditions. As the
 
 As we watched this experiment unfold, it seemed that with every gust of wind the algorithm was powerless to stop the humidity from dropping far below the desired level, and it never had a chance to stabilize. 
 
-This less sucessful trial shows the limitions of our setup, and clarifies what it accomplishes. When the humidifier is turned on to a certain power level, the enviornment will tend to favor some average humidity reading. The PID alrogithm responds to deviations from that average, and can even set the humidity to a level consistently higher or lower than that average. This works well when the enviornmental conditions do not change quickly or sharply, but naturally fails when the enviornmental conditions alter the humidity more strongly than the humidifier can.
+This less sucessful trial shows the limitations of our setup, and clarifies what it accomplishes. When the humidifier is turned on to a certain power level, the enviornment will tend to favor some average humidity reading. The PID alrogithm responds to deviations from that average, and can even set the humidity to a level consistently higher or lower than that average. This works well when the enviornmental conditions do not change quickly or sharply, but naturally fails when the enviornmental conditions alter the humidity more strongly than the humidifier can.
 
 
 
